@@ -1,0 +1,6 @@
+.libPaths("/home/adjdsj/R/x86_64-pc-linux-gnu-library/3.4")
+library(esaj)
+library(tidyverse)
+x<-download_cjsg('violência doméstica E gênero',classes="417",max_page=Inf)
+df<-parse_cjsg(x)
+writexl::write_xlsx(df,"df.xlsx")
